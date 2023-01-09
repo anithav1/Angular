@@ -53,12 +53,17 @@ export class AddpizzaComponent implements OnInit {
       (res) => {
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a food!!!"
-        this.router.navigate(['/admin']);
+        this.router.navigate(['https://anidatabase.onrender.com/admin']);
         // console.log(res)
       }
       ,
-      error => {
+      (error) => {
 
+        if (error instanceof HttpErrorResponse) {
+
+            this.router.navigate(['https://anidatabase.onrender.com/login'])
+
+        }
         console.log(error);
       }
     );

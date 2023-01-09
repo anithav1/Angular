@@ -1718,11 +1718,11 @@ class AddpizzaComponent {
         this.http.post('https://anidatabase.onrender.com/admin/addpizza', formData).subscribe((res) => {
             this.adminService.avail = true;
             this.adminService.msg = "Successfully Added a food!!!";
-            this.router.navigate(['/admin']);
+            this.router.navigate(['https://anidatabase.onrender.com/admin']);
             // console.log(res)
         }, (error) => {
             if (error instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpErrorResponse"]) {
-                this.router.navigate(['/login']);
+                this.router.navigate(['https://anidatabase.onrender.com/login']);
             }
             console.log(error);
         });
