@@ -61,7 +61,7 @@ export class AddpizzaComponent implements OnInit {
 
         if (error instanceof HttpErrorResponse) {
 
-            this.router.navigate(['https://anidatabase.onrender.com/login'])
+            this.router.navigate(['/login'])
 
         }
         console.log(error);

@@ -1722,7 +1722,7 @@ class AddpizzaComponent {
             // console.log(res)
         }, (error) => {
             if (error instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpErrorResponse"]) {
-                this.router.navigate(['https://anidatabase.onrender.com/login']);
+                this.router.navigate(['/login']);
             }
             console.log(error);
         });
