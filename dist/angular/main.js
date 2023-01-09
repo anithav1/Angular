@@ -3444,13 +3444,13 @@ class CartService {
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     addPizza(body) {
-        return this.http.post('http://127.0.0.1:3000/addtocart', body, {
+        return this.http.post('https://anidatabase.onrender.com/addtocart', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     deletePizza(body) {
-        return this.http.post('http://127.0.0.1:3000/deletefromcart', body, {
+        return this.http.post('https://anidatabase.onrender.com/deletefromcart', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4067,7 +4067,7 @@ class AuthService {
         return this.http.get(this.baseUri + "/check", { headers: this.headers });
     }
     register(body) {
-        return this.http.post('http://127.0.0.1:3000/register', body, {
+        return this.http.post('https://anidatabase.onrender.com/register', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4076,13 +4076,13 @@ class AuthService {
         return this.http.get(this.baseUri + "/read", { headers: this.headers });
     }
     reset(body) {
-        return this.http.post('http://127.0.0.1:3000/reset', body, {
+        return this.http.post('https://anidatabase.onrender.com/reset', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     resetpassworddone(body) {
-        return this.http.put('http://127.0.0.1:3000/forgot-password-done', body, {
+        return this.http.put('https://anidatabase.onrender.com/forgot-password-done', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4091,7 +4091,7 @@ class AuthService {
         return this.http.get(this.baseUri + "/otp", { headers: this.headers });
     }
     login(body) {
-        return this.http.post('http://127.0.0.1:3000/login', body, {
+        return this.http.post('https://anidatabase.onrender.com/login', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4117,13 +4117,13 @@ class AuthService {
         return this.http.get(this.baseUri + "/editprofile?id=" + id + "&name=" + name + "&email=" + email + "&contact=" + contact, { headers: this.headers });
     }
     changepassword(body) {
-        return this.http.post('http://127.0.0.1:3000/changepassword', body, {
+        return this.http.post('https://anidatabase.onrender.com/changepassword', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     sendfeedback(body) {
-        return this.http.post('http://127.0.0.1:3000/sendfeedback', body, {
+        return this.http.post('https://anidatabase.onrender.com/sendfeedback', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
