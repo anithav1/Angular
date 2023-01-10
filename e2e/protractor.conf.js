@@ -17,7 +17,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://anifoodangular.onrender.com',
+  baseUrl: 'https://anifoodangular.onrender.com/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
