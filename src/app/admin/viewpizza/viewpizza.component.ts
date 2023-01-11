@@ -9,7 +9,7 @@ import { Pizza } from '../../pizza'
   styleUrls: ['./viewpizza.component.css']
 })
 export class ViewpizzaComponent implements OnInit {
-  public pizzas: Pizza[];
+  public pizza: Pizza[];
   avail: boolean;
   arr: any[];
 
@@ -42,7 +42,7 @@ export class ViewpizzaComponent implements OnInit {
     this.adminService.getAllPizza().subscribe(
       data => {
         this.arr = data['msg'];
-        this.pizzas = data['msg'];
+        this.pizza = data['msg'];
 
       },
       (error) => {

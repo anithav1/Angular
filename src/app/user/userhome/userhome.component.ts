@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent implements OnInit {
-  pizzas: any[];
+  pizza: any[];
   constructor(private router: Router, private authService: AuthService, private cartService: CartService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
@@ -46,7 +46,7 @@ export class UserhomeComponent implements OnInit {
   readPizza() {
     this.authService.getAllPizza().subscribe(
       data => {
-        this.pizzas = data['msg'];
+        this.pizza = data['msg'];
 
       },
       error => {

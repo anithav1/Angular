@@ -10,7 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartComponent implements OnInit {
   arr: any[];
-  pizzas: any[];
+  pizza: any[];
   total:any;
   emptychechk:boolean;
 
@@ -71,9 +71,9 @@ export class CartComponent implements OnInit {
 
         this.total=this.arr['total'];
 
-        this.pizzas=this.arr['pizza']
+        this.pizza=this.arr['pizza']
 
-        if(this.pizzas.length==0)
+        if(this.pizza.length==0)
         {
           this.router.navigate(['/empty-cart'])
           return;
