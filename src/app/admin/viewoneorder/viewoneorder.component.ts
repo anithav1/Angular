@@ -14,7 +14,7 @@ export class ViewoneorderComponent implements OnInit {
   constructor(private router: Router, private adminService: AdminService) { }
   oneorderid:any;
   arr: any[];
-  pizza: any[];
+  pizzas: any[];
   total:any;
 
 
@@ -53,7 +53,7 @@ export class ViewoneorderComponent implements OnInit {
 
         this.arr = data[0];
         this.total=this.arr['total'];
-        this.pizza=this.arr['pizza']
+        this.pizzas=this.arr['pizza']
       },
       error => {
         console.log(error);
