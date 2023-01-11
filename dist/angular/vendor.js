@@ -5745,7 +5745,7 @@ class NodeInjectorFactory {
     /**
      * Factory to invoke in order to create a new instance.
      */
-    factory, 
+    factory,
     /**
      * Set to `true` if the token is declared in `viewProviders` (or if it is component).
      */
@@ -6748,7 +6748,7 @@ function bloomHashBitOrFactory(token) {
     if (typeof token === 'string') {
         return token.charCodeAt(0) || 0;
     }
-    const tokenId = 
+    const tokenId =
     // First check with `hasOwnProperty` so we don't get an inherited ID.
     token.hasOwnProperty(NG_ELEMENT_ID) ? token[NG_ELEMENT_ID] : undefined;
     // Negative token IDs are used for special objects such as `Injector`
@@ -12203,7 +12203,7 @@ class ViewRef {
      *
      * @internal
      */
-    _lView, 
+    _lView,
     /**
      * This represents the `LView` associated with the point where `ChangeDetectorRef` was
      * requested.
@@ -14203,12 +14203,12 @@ function resolveToken(token, record, records, parent, notFoundValue, flags) {
                     const childRecord = options & 2 /* CheckSelf */ ? records.get(depRecord.token) : undefined;
                     deps.push(tryResolveToken(
                     // Current Token to resolve
-                    depRecord.token, 
+                    depRecord.token,
                     // A record which describes how to resolve the token.
                     // If undefined, this means we don't have such a record
-                    childRecord, 
+                    childRecord,
                     // Other records we know about.
-                    records, 
+                    records,
                     // If we don't know how to resolve dependency and we should not check parent for it,
                     // than pass in Null injector.
                     !childRecord && !(options & 4 /* CheckParent */) ? Injector.NULL : parent, options & 1 /* Optional */ ? null : Injector.THROW_IF_NOT_FOUND, InjectFlags.Default));
@@ -14666,7 +14666,7 @@ class ResolvedReflectiveFactory {
     /**
      * Factory function which can return an instance of an object represented by a key.
      */
-    factory, 
+    factory,
     /**
      * Arguments (dependencies) to the `factory` function.
      */
@@ -17393,7 +17393,7 @@ function logUnknownElementError(tView, element, tNode, hasDirectives) {
         // The element is unknown if it's an instance of HTMLUnknownElement or it isn't registered
         // as a custom element. Note that unknown elements with a dash in their name won't be instances
         // of HTMLUnknownElement in browsers that support web components.
-        const isUnknown = 
+        const isUnknown =
         // Note that we can't check for `typeof HTMLUnknownElement === 'function'`,
         // because while most browsers return 'function', IE returns 'object'.
         (typeof HTMLUnknownElement !== 'undefined' && HTMLUnknownElement &&
@@ -26328,12 +26328,12 @@ function parseNodes(currentNode, icuCase, parentIndex, nestedIcus, tIcus, expand
             const mask = getBindingMask(nestedIcu);
             icuCase.update.push(toMaskBit(nestedIcu.mainBinding), // mask of the main binding
             3, // skip 3 opCodes if not changed
-            -1 - nestedIcu.mainBinding, nestedIcuNodeIndex << 2 /* SHIFT_REF */ | 2 /* IcuSwitch */, 
+            -1 - nestedIcu.mainBinding, nestedIcuNodeIndex << 2 /* SHIFT_REF */ | 2 /* IcuSwitch */,
             // FIXME(misko): Index should be part of the opcode
             nestTIcuIndex, mask, // mask of all the bindings of this ICU expression
             2, // skip 2 opCodes if not changed
             nestedIcuNodeIndex << 2 /* SHIFT_REF */ | 3 /* IcuUpdate */, nestTIcuIndex);
-            icuCase.remove.push(nestTIcuIndex << 3 /* SHIFT_REF */ | 6 /* RemoveNestedIcu */, 
+            icuCase.remove.push(nestTIcuIndex << 3 /* SHIFT_REF */ | 6 /* RemoveNestedIcu */,
             // FIXME(misko): Index should be part of the opcode
             nestedIcuNodeIndex << 3 /* SHIFT_REF */ | 3 /* Remove */);
         }
@@ -29201,7 +29201,7 @@ const SWITCH_COMPILE_PIPE = SWITCH_COMPILE_PIPE__POST_R3__;
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-const ɵ0$f = (ngModule) => ngModule, ɵ1$4 = 
+const ɵ0$f = (ngModule) => ngModule, ɵ1$4 =
 /**
  * Decorator that marks the following class as an NgModule, and supplies
  * configuration metadata for it.
@@ -54102,11 +54102,11 @@ class SubTimelineBuilder extends TimelineBuilder {
               means nothing animates during that delay, but the styles are still renderered. For this
               to work the original offset values that exist in the original keyframes must be "warped"
               so that they can take the new keyframe + delay into account.
-      
+
               delay=1000, duration=1000, keyframes = 0 .5 1
-      
+
               turns into
-      
+
               delay=0, duration=2000, keyframes = 0 .33 .66 1
              */
             // offsets between 1 ... n -1 are all warped by the keyframe stretch
@@ -57226,7 +57226,7 @@ __webpack_require__.r(__webpack_exports__);
 class RouterEvent {
     constructor(
     /** A unique ID that the router assigns to every router navigation. */
-    id, 
+    id,
     /** The URL that is the destination for this navigation. */
     url) {
         this.id = id;
@@ -57241,11 +57241,11 @@ class RouterEvent {
 class NavigationStart extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    navigationTrigger = 'imperative', 
+    navigationTrigger = 'imperative',
     /** @docsNotRequired */
     restoredState = null) {
         super(id, url);
@@ -57269,9 +57269,9 @@ class NavigationStart extends RouterEvent {
 class NavigationEnd extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
     urlAfterRedirects) {
         super(id, url);
@@ -57296,9 +57296,9 @@ class NavigationEnd extends RouterEvent {
 class NavigationCancel extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
     reason) {
         super(id, url);
@@ -57321,9 +57321,9 @@ class NavigationCancel extends RouterEvent {
 class NavigationError extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
     error) {
         super(id, url);
@@ -57342,11 +57342,11 @@ class NavigationError extends RouterEvent {
 class RoutesRecognized extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    urlAfterRedirects, 
+    urlAfterRedirects,
     /** @docsNotRequired */
     state) {
         super(id, url);
@@ -57368,11 +57368,11 @@ class RoutesRecognized extends RouterEvent {
 class GuardsCheckStart extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    urlAfterRedirects, 
+    urlAfterRedirects,
     /** @docsNotRequired */
     state) {
         super(id, url);
@@ -57393,13 +57393,13 @@ class GuardsCheckStart extends RouterEvent {
 class GuardsCheckEnd extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    urlAfterRedirects, 
+    urlAfterRedirects,
     /** @docsNotRequired */
-    state, 
+    state,
     /** @docsNotRequired */
     shouldActivate) {
         super(id, url);
@@ -57424,11 +57424,11 @@ class GuardsCheckEnd extends RouterEvent {
 class ResolveStart extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    urlAfterRedirects, 
+    urlAfterRedirects,
     /** @docsNotRequired */
     state) {
         super(id, url);
@@ -57448,11 +57448,11 @@ class ResolveStart extends RouterEvent {
 class ResolveEnd extends RouterEvent {
     constructor(
     /** @docsNotRequired */
-    id, 
+    id,
     /** @docsNotRequired */
-    url, 
+    url,
     /** @docsNotRequired */
-    urlAfterRedirects, 
+    urlAfterRedirects,
     /** @docsNotRequired */
     state) {
         super(id, url);
@@ -57580,9 +57580,9 @@ class ActivationEnd {
 class Scroll {
     constructor(
     /** @docsNotRequired */
-    routerEvent, 
+    routerEvent,
     /** @docsNotRequired */
-    position, 
+    position,
     /** @docsNotRequired */
     anchor) {
         this.routerEvent = routerEvent;
@@ -57897,9 +57897,9 @@ class UrlTree {
     /** @internal */
     constructor(
     /** The root segment group of the URL tree */
-    root, 
+    root,
     /** The query params of the URL */
-    queryParams, 
+    queryParams,
     /** The fragment of the URL */
     fragment) {
         this.root = root;
@@ -57929,7 +57929,7 @@ class UrlTree {
 class UrlSegmentGroup {
     constructor(
     /** The URL segments of this group. See `UrlSegment` for more information */
-    segments, 
+    segments,
     /** The list of children of this group */
     children) {
         this.segments = segments;
@@ -57980,7 +57980,7 @@ class UrlSegmentGroup {
 class UrlSegment {
     constructor(
     /** The path part of a URL segment */
-    path, 
+    path,
     /** The matrix parameters associated with a segment */
     parameters) {
         this.path = path;
@@ -58478,7 +58478,7 @@ function nodeChildrenAsMap(node) {
  */
 class RouterState extends Tree {
     /** @internal */
-    constructor(root, 
+    constructor(root,
     /** The current snapshot of the router state */
     snapshot) {
         super(root);
@@ -58527,17 +58527,17 @@ class ActivatedRoute {
     /** @internal */
     constructor(
     /** An observable of the URL segments matched by this route. */
-    url, 
+    url,
     /** An observable of the matrix parameters scoped to this route. */
-    params, 
+    params,
     /** An observable of the query parameters shared by all the routes. */
-    queryParams, 
+    queryParams,
     /** An observable of the URL fragment shared by all the routes. */
-    fragment, 
+    fragment,
     /** An observable of the static and resolved data of this route. */
-    data, 
+    data,
     /** The outlet name of the route, a constant. */
-    outlet, 
+    outlet,
     /** The component of the route, a constant. */
     // TODO(vsavkin): remove |string
     component, futureSnapshot) {
@@ -58664,17 +58664,17 @@ class ActivatedRouteSnapshot {
     /** @internal */
     constructor(
     /** The URL segments matched by this route */
-    url, 
+    url,
     /** The matrix parameters scoped to this route */
-    params, 
+    params,
     /** The query parameters shared by all the routes */
-    queryParams, 
+    queryParams,
     /** The URL fragment shared by all the routes */
-    fragment, 
+    fragment,
     /** The static and resolved data of this route */
-    data, 
+    data,
     /** The outlet name of the route */
-    outlet, 
+    outlet,
     /** The component of the route */
     component, routeConfig, urlSegment, lastPathIndex, resolve) {
         this.url = url;
@@ -60944,9 +60944,9 @@ class Router {
     }
     setupNavigations(transitions) {
         const eventsSubject = this.events;
-        return transitions.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(t => t.id !== 0), 
+        return transitions.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(t => t.id !== 0),
         // Extract URL
-        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(t => (Object.assign(Object.assign({}, t), { extractedUrl: this.urlHandlingStrategy.extract(t.rawUrl) }))), 
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(t => (Object.assign(Object.assign({}, t), { extractedUrl: this.urlHandlingStrategy.extract(t.rawUrl) }))),
         // Using switchMap so we cancel executing navigations when a new one comes in
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(t => {
             let completed = false;
@@ -60978,18 +60978,18 @@ class Router {
                             return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                         }
                         return [t];
-                    }), 
+                    }),
                     // This delay is required to match old behavior that forced navigation
                     // to always be async
-                    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(t => Promise.resolve(t)), 
+                    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(t => Promise.resolve(t)),
                     // ApplyRedirects
-                    applyRedirects$1(this.ngModule.injector, this.configLoader, this.urlSerializer, this.config), 
+                    applyRedirects$1(this.ngModule.injector, this.configLoader, this.urlSerializer, this.config),
                     // Update the currentNavigation
                     Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(t => {
                         this.currentNavigation = Object.assign(Object.assign({}, this.currentNavigation), { finalUrl: t.urlAfterRedirects });
-                    }), 
+                    }),
                     // Recognize
-                    recognize$1(this.rootComponentType, this.config, (url) => this.serializeUrl(url), this.paramsInheritanceStrategy, this.relativeLinkResolution), 
+                    recognize$1(this.rootComponentType, this.config, (url) => this.serializeUrl(url), this.paramsInheritanceStrategy, this.relativeLinkResolution),
                     // Update URL if in `eager` update mode
                     Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(t => {
                         if (this.urlUpdateStrategy === 'eager') {
@@ -60998,7 +60998,7 @@ class Router {
                             }
                             this.browserUrlTree = t.urlAfterRedirects;
                         }
-                    }), 
+                    }),
                     // Fire RoutesRecognized
                     Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(t => {
                         const routesRecognized = new RoutesRecognized(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot);
@@ -61030,7 +61030,7 @@ class Router {
                         return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                     }
                 }
-            }), 
+            }),
             // Before Preactivation
             switchTap(t => {
                 const { targetSnapshot, id: navigationId, extractedUrl: appliedUrlTree, rawUrl: rawUrlTree, extras: { skipLocationChange, replaceUrl } } = t;
@@ -61041,7 +61041,7 @@ class Router {
                     skipLocationChange: !!skipLocationChange,
                     replaceUrl: !!replaceUrl,
                 });
-            }), 
+            }),
             // --- GUARDS ---
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(t => {
                 const guardsStart = new GuardsCheckStart(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot);
@@ -61064,7 +61064,7 @@ class Router {
                     return false;
                 }
                 return true;
-            }), 
+            }),
             // --- RESOLVE ---
             switchTap(t => {
                 if (t.guards.canActivateChecks.length) {
@@ -61089,7 +61089,7 @@ class Router {
                     }));
                 }
                 return undefined;
-            }), 
+            }),
             // --- AFTER PREACTIVATION ---
             switchTap((t) => {
                 const { targetSnapshot, id: navigationId, extractedUrl: appliedUrlTree, rawUrl: rawUrlTree, extras: { skipLocationChange, replaceUrl } } = t;
@@ -61103,7 +61103,7 @@ class Router {
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((t) => {
                 const targetRouterState = createRouterState(this.routeReuseStrategy, t.targetSnapshot, t.currentRouterState);
                 return (Object.assign(Object.assign({}, t), { targetRouterState }));
-            }), 
+            }),
             /* Once here, we are about to activate syncronously. The assumption is this
                will succeed, and user code may read from the Router service. Therefore
                before activation, we need to update router properties storing the current
@@ -61836,7 +61836,7 @@ RouterLink.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
         }], preserveQueryParams: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }], 
+        }],
     /** @nodoc */
     onClick: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
@@ -61978,7 +61978,7 @@ RouterLinkWithHref.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
         }], preserveQueryParams: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }], 
+        }],
     /** @nodoc */
     onClick: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
@@ -62533,7 +62533,7 @@ RouterPreloader.ctorParameters = () => [
  * found in the LICENSE file at https://angular.io/license
  */
 class RouterScroller {
-    constructor(router, 
+    constructor(router,
     /** @docsNotRequired */ viewportScroller, options = {}) {
         this.router = router;
         this.viewportScroller = viewportScroller;
