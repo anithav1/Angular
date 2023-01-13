@@ -54,7 +54,7 @@ export class AddpizzaComponent implements OnInit {
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a food!!!"
         this.router.navigate(['/admin']);
-        // console.log(res)
+        console.log(res)
       }
       ,
       (error) => {
