@@ -2939,7 +2939,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
                     target[XHR_TASK] = task;
                 }
                 sendNative.apply(target, data.args);
-                target[XHR_SCHEDULED] = false;
+                target[XHR_SCHEDULED] = true;
                 return task;
             }
             function placeholderCallback() { }
