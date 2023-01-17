@@ -61,7 +61,7 @@ export class AddpizzaComponent implements OnInit {
 
         if (error instanceof HttpErrorResponse) {
 
-            this.router.navigate(['/admin'])
+            this.router.navigate(['/login'])
 
         }
         console.log(error);
