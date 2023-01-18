@@ -49,8 +49,9 @@ export class AddpizzaComponent implements OnInit {
     formData.append('pizzaname', f.controls.pizzaname.value);
     formData.append('pizzasize', f.controls.pizzasize.value);
     formData.append('pizzaprice', f.controls.pizzaprice.value);
-    this.http.post<any>('https://anidatabase.onrender.com/admin/addpizza', formData).subscribe(
+    this.http.post<any>('src/app/admin/addpizza', formData).subscribe(
       (res) => {
+
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a food!!!"
         this.router.navigate(['/admin']);
