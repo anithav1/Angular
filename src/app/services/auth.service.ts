@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   public avail:boolean = false;
   public msg:string="";
-  private baseUri: string = "https://anidatabase.onrender.com";
+  private baseUri: string = "https://anithav1.github.io/database";
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   register(body: any) {
-    return this.http.post('https://anidatabase.onrender.com/register', body, {
+    return this.http.post('https://anithav1.github.io/database/register', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -28,7 +28,7 @@ export class AuthService {
   }
 
   reset(body: any) {
-    return this.http.post('https://anidatabase.onrender.com/reset', body, {
+    return this.http.post('https://anithav1.github.io/database/reset', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -36,7 +36,7 @@ export class AuthService {
 
   resetpassworddone(body: any) {
 
-    return this.http.put('https://anidatabase.onrender.com/forgot-password-done', body, {
+    return this.http.put('https://anithav1.github.io/database/forgot-password-done', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -47,7 +47,7 @@ export class AuthService {
   }
 
   login(body: any) {
-    return this.http.post('https://anidatabase.onrender.com/login', body, {
+    return this.http.post('https://anithav1.github.io/database/login', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -83,7 +83,7 @@ export class AuthService {
   }
 
   changepassword(body: any) {
-    return this.http.post('https://anidatabase.onrender.com/changepassword', body, {
+    return this.http.post('https://anithav1.github.io/database/changepassword', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -91,7 +91,7 @@ export class AuthService {
 
 
   sendfeedback(body: any) {
-    return this.http.post('https://anidatabase.onrender.com/sendfeedback', body, {
+    return this.http.post('https://anithav1.github.io/database/sendfeedback', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
