@@ -100,7 +100,7 @@ export class EditpizzaComponent implements OnInit {
       formData.append('file', this.image);
 
       // *************
-      this.http.post<any>('https://anithav1.github.io/database/admin/editpizzawithimage', formData).subscribe(
+      this.http.post<any>('https://anidatabase.onrender.com/admin/editpizzawithimage', formData).subscribe(
         (res) => {
           this.adminService.avail = true;
           this.adminService.msg = "Successfully Edited a pizza!!!"
@@ -123,7 +123,7 @@ export class EditpizzaComponent implements OnInit {
     }
     else {
 
-      this.http.get<any>('https://anithav1.github.io/database/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp
+      this.http.get<any>('https://anidatabase.onrender.com/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp
       ).subscribe(
         (res) => {
           this.adminService.avail = true;
