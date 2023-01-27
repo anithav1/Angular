@@ -777,7 +777,7 @@ class AdminService {
         this.http = http;
         this.avail = false;
         this.msg = "";
-        this.baseUri = "https://backendapp-39804.web.app/admin";
+        this.baseUri = "https://anidatabase.onrender.com/admin";
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     check() {
@@ -1715,7 +1715,7 @@ class AddpizzaComponent {
         formData.append('pizzaname', f.controls.pizzaname.value);
         formData.append('pizzasize', f.controls.pizzasize.value);
         formData.append('pizzaprice', f.controls.pizzaprice.value);
-        this.http.post('https://backendapp-39804.web.app/admin/addpizza', formData).subscribe((res) => {
+        this.http.post('https://anidatabase.onrender.com/admin/addpizza', formData).subscribe((res) => {
             this.adminService.avail = true;
             this.adminService.msg = "Successfully Added a food!!!";
             this.router.navigate(['/admin']);
@@ -3440,17 +3440,17 @@ class CartService {
         this.router = router;
         this.avail = false;
         this.msg = "";
-        this.baseUri = "https://backendapp-39804.web.app";
+        this.baseUri = "https://anidatabase.onrender.com";
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     addPizza(body) {
-        return this.http.post('https://backendapp-39804.web.app/addtocart', body, {
+        return this.http.post('https://anidatabase.onrender.com/addtocart', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     deletePizza(body) {
-        return this.http.post('https://backendapp-39804.web.app/deletefromcart', body, {
+        return this.http.post('https://anidatabase.onrender.com/deletefromcart', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -3566,7 +3566,7 @@ class EditpizzaComponent {
             // console.log("yes image");
             formData.append('file', this.image);
             // *************
-            this.http.post('https://backendapp-39804.web.app/admin/editpizzawithimage', formData).subscribe((res) => {
+            this.http.post('https://anidatabase.onrender.com/admin/editpizzawithimage', formData).subscribe((res) => {
                 this.adminService.avail = true;
                 this.adminService.msg = "Successfully Edited a pizza!!!";
                 this.router.navigate(['/admin']);
@@ -3579,7 +3579,7 @@ class EditpizzaComponent {
             });
         }
         else {
-            this.http.get('https://backendapp-39804.web.app/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp).subscribe((res) => {
+            this.http.get('https://anidatabase.onrender.com/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp).subscribe((res) => {
                 this.adminService.avail = true;
                 this.adminService.msg = "Successfully Edited a pizza!!!";
                 this.router.navigate(['/admin']);
@@ -4060,14 +4060,14 @@ class AuthService {
         this.router = router;
         this.avail = false;
         this.msg = "";
-        this.baseUri = "https://backendapp-39804.web.app";
+        this.baseUri = "https://anidatabase.onrender.com";
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     check() {
         return this.http.get(this.baseUri + "/check", { headers: this.headers });
     }
     register(body) {
-        return this.http.post('https://backendapp-39804.web.app/register', body, {
+        return this.http.post('https://anidatabase.onrender.com/register', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4076,13 +4076,13 @@ class AuthService {
         return this.http.get(this.baseUri + "/read", { headers: this.headers });
     }
     reset(body) {
-        return this.http.post('https://backendapp-39804.web.app/reset', body, {
+        return this.http.post('https://anidatabase.onrender.com/reset', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     resetpassworddone(body) {
-        return this.http.put('https://backendapp-39804.web.app/forgot-password-done', body, {
+        return this.http.put('https://anidatabase.onrender.com/forgot-password-done', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4091,7 +4091,7 @@ class AuthService {
         return this.http.get(this.baseUri + "/otp", { headers: this.headers });
     }
     login(body) {
-        return this.http.post('https://backendapp-39804.web.app/login', body, {
+        return this.http.post('https://anidatabase.onrender.com/login', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
@@ -4117,13 +4117,13 @@ class AuthService {
         return this.http.get(this.baseUri + "/editprofile?id=" + id + "&name=" + name + "&email=" + email + "&contact=" + contact, { headers: this.headers });
     }
     changepassword(body) {
-        return this.http.post('https://backendapp-39804.web.app/changepassword', body, {
+        return this.http.post('https://anidatabase.onrender.com/changepassword', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });
     }
     sendfeedback(body) {
-        return this.http.post('https://backendapp-39804.web.app/sendfeedback', body, {
+        return this.http.post('https://anidatabase.onrender.com/sendfeedback', body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().append('Content-Type', 'application/json')
         });

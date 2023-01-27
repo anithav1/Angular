@@ -8,7 +8,7 @@ export class AdminService {
   public avail:boolean = false;
   public msg:string="";
   public temporder:any;
-  private baseUri: string = "https://backendapp-39804.web.app/admin";
+  private baseUri: string = "https://anidatabase.onrender.com/admin";
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient) { }
 
