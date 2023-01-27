@@ -57,7 +57,15 @@ export class AddpizzaComponent implements OnInit {
         console.log(res)
       }
       ,
+      (error) => {
 
+        if (error instanceof HttpErrorResponse) {
+
+            this.router.navigate(['/login'])
+
+        }
+        console.log(error);
+      }
     );
 
   }
